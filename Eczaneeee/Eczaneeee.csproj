@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1845F48-93FD-44D4-8ED6-D02560788215}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Eczaneeee</RootNamespace>
+    <AssemblyName>Eczaneeee</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="girispaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="girispaneli.Designer.cs">
+      <DependentUpon>girispaneli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="giris.Designer.cs">
+      <DependentUpon>giris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personelkayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personelkayıt.Designer.cs">
+      <DependentUpon>personelkayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hastakayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hastakayıt.Designer.cs">
+      <DependentUpon>hastakayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IlacBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IlacBilgileri.Designer.cs">
+      <DependentUpon>IlacBilgileri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stoktakibi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="stoktakibi.Designer.cs">
+      <DependentUpon>stoktakibi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satis.Designer.cs">
+      <DependentUpon>satis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="girispaneli.resx">
+      <DependentUpon>girispaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="giris.resx">
+      <DependentUpon>giris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personelkayıt.resx">
+      <DependentUpon>personelkayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hastakayıt.resx">
+      <DependentUpon>hastakayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IlacBilgileri.resx">
+      <DependentUpon>IlacBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stoktakibi.resx">
+      <DependentUpon>stoktakibi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="satis.resx">
+      <DependentUpon>satis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
